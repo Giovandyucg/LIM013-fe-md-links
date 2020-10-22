@@ -1,13 +1,13 @@
 {
-  "name": "md-links",
+  "name": "giovandyyg",
   "version": "1.0.0",
   "description": "\"Lee y analiza archivos en formato Markdown, para verificar los links que contengan y reportan algunas estadísticas.\"",
-  "main": "index.js",
+  "main": "src/cli.js",
+  "bin": "src/cli.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "babel src -d lib",
     "type": "module"
-    
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,12 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "commander": "^6.1.0",
+    "fetch-mock": "^9.10.7",
+    "jsdom": "^16.4.0",
+    "marked": "^1.2.0",
+    "node-fetch": "^2.6.1"
   }
 }
