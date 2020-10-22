@@ -144,7 +144,7 @@ describe('Validar los Link de un archivo .MD', () => {
   });
   it('Links encontrados - retornar un array:  file, href, status, statusMessage y text', 
   () => {
-      myFunction
+      return myFunction
           .optionValidate('./test/prueba/yesenia.md')
           .then((resp) => {
               expect(resp).toEqual(data.arrayLinksValidate);
@@ -154,18 +154,21 @@ describe('Validar los Link de un archivo .MD', () => {
   });
 });
 
-// describe('validateLinks', () => {
+// describe('optionValidate', () => {
 //   it('Debería ser una función', () => {
 //     expect(typeof myFunction.optionValidate).toBe('function');
 //   });
 //   it('debería retornar un array de objetos con las propiedades href, text, file, status, statusText', (done) => {
-//     optionValidate(data.arrayLinks).then((resolve) => {
-//       expect(resolve).toEqual(data.arrayLinksValidate);
-//       done();
+//     myFunction
+//     .optionValidate(data.arrayLinks)
+//     .then((resolve) => {
+//        expect(resolve).toEqual(data.arrayLinksValidate);
+//      done();
 //     });
 //   });
 //   it('Debería retornar FAIL si la URL no es válida', (done) => {
-//     optionValidate(data.error).then((resolve) => {
+//        myFunction
+//       .optionValidate(data.error).then((resolve) => {
 //       expect(resolve).toEqual(data.rep);
 //       done();
 //     });

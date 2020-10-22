@@ -23,7 +23,7 @@ the links of all the markdown links of a path. It also give the information:
 
 ###  Flow Chart CLI
 
-![](src/image/diagramacli.png)
+![](src/image/diagrama cli.png)
 <!-- ![](img/CLIFG2.jpg) -->
 
 ## How to install mdLinks?
