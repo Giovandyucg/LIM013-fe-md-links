@@ -1,11 +1,17 @@
 
 
 // const jsdom = require ('jsdom');
-const path = require('path');
-const fs = require('fs');
-const marked = require('marked');
+// const path = require('path');
+// const fs = require('fs');
+// const marked = require('marked');
+// const renderer = new marked.Renderer();
+// const fetch = require('node-fetch');
+import path from'path';
+import fs from'fs';
+import marked from'marked';
 const renderer = new marked.Renderer();
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
+
 
 
 
@@ -87,7 +93,7 @@ export const getFilesAndDirectories = (route) => {
 
     
 
-    export const getLinks = (route) => {
+     export const getLinks = (route) => {
           let arrayMDLinks = [];
           const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
            getFiles(route).forEach((file) => {
@@ -110,12 +116,12 @@ export const getFilesAndDirectories = (route) => {
           return arrayMDLinks;
           
         };
-
+    
         // console.log(getLinks('./test/prueba/varios/pruebaVarios.md'));
         // console.log(getLinks('prueba1.md'));
 
 
-     export const optionValidate = (route)=>{
+      export const optionValidate = (route)=>{
           const linksArray = getLinks(route);
           const valid = linksArray.map((link) => fetch(link.href)
           .then((res)=>({
@@ -138,6 +144,8 @@ export const getFilesAndDirectories = (route) => {
           return Promise.all(valid);
           
         };
+
+      //  export default getLinks;
          
         // module.exports = optionValidate;
         

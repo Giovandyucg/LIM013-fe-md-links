@@ -1,10 +1,10 @@
-import { getLinks, optionValidate } from './utils1.js'
+import  {getLinks,optionValidate}  from './utils1.js'
 // const functionMdLinks = require('./utils1.js');
 
 
 
 // export default mdLinks;
-  export const mdLinks = (route, options) => {
+const mdLinks = (route, options) => {
   if (options.validate === true) {
     return optionValidate(route)
     // .then(resp => resp).catch(err => err);  
@@ -13,7 +13,7 @@ import { getLinks, optionValidate } from './utils1.js'
     return new Promise(resolve => resolve(getLinks(route)));
   } 
 };
-// export default mdLinks;
+export default mdLinks;
 // module.exports = mdLinks;
 
 

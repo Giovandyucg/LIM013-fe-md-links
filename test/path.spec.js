@@ -4,6 +4,7 @@ const data = require('./testData.js');
 const path = require('path');
 const cwd = process.cwd();
 const myFunction =require('../src/md-Links/utils1.js');
+// import  getLinks from './utils1.js'
 
 
 const ruta3 = 'C:\\Users\\HP\\MD-Links\\LIM013-fe-md-links\\test\\prueba';

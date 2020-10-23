@@ -1,6 +1,6 @@
 // const mdLinks =require('../src/md-Links/mdLinks');
 // const myFunction = require('../src/md-Links/mdLinks.js');
-import {mdLinks} from '../src/md-Links/mdLinks.js'
+import mdLinks from '../src/md-Links/mdLinks.js'
 // console.log(mdLinks);
 const path = require('path');
 const cwd = process.cwd();

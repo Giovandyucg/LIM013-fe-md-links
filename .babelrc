@@ -3,6 +3,14 @@
   // with options
   {
     "plugins": [
-      ["@babel/plugin-transform-modules-commonjs"]
+        [
+            "@babel/plugin-transform-modules-commonjs",
+            {
+                "allowTopLevelThis": true
+            }
+        ]
+    ],
+    "presets": [
+        "@babel/preset-env"
     ]
-  }
+}

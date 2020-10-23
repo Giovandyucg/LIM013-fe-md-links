@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import {mdLinks} from './mdLinks'
-const chalk = require('chalk');
+import mdLinks from './mdLinks.js';
+import chalk from 'chalk';
 // import {optionValidate} from './utils1'
 // const validate = require('./index');
 // import {optionValidate} from './utils1'
@@ -67,7 +67,7 @@ const helps = process.argv.indexOf('--help');
 // console.log('route',args);
 // console.log('options',options);
 
-const funcionCli = (route) => {
+export const funcionCli = (route) => {
   if (helps >= 0 || route === undefined) {
     console.log(warning);
   }
