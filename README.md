@@ -19,12 +19,12 @@ Our options:
 ### Flow Chart API 
 
 
-![](src/image/diagrama api.png)
+![diagrama1](src/image/diagrama1.png)
 
 ###  Flow Chart CLI
 
 
-![](src/image/diagrama cli.png)
+![diagrama2](src/image/diagrama2.png)
 
 
 ## How to install mdLinks?

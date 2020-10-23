@@ -1,6 +1,6 @@
 {
   "name": "giovandyyg-md-links",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "\"Lee y analiza archivos en formato Markdown, para verificar los links que contengan y reportan algunas estadísticas.\"",
   "main": "src/md-Links/cli.js",
   "bin": "src/md-Links/cli.js",
