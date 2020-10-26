@@ -153,6 +153,17 @@ describe('Validar los Link de un archivo .MD', () => {
          
           });
   });
+
+  // it('Links encontrados - retornar un array:  file, href, status, statusMessage y text', 
+  // () => {
+  //     return myFunction
+  //         .optionValidate('./test/prueba/yesenia.md')
+  //         .catch((resp) => {
+  //             expect(resp).toEqual(data.arrayLinksValidate);
+              
+         
+  //         });
+  // });
 });
 
 // describe('optionValidate', () => {

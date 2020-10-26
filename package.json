@@ -1,8 +1,8 @@
 {
   "name": "giovandyyg-md-links",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "\"Lee y analiza archivos en formato Markdown, para verificar los links que contengan y reportan algunas estadísticas.\"",
-  "main": "src/md-Links/cli.js",
+  "main": "lib/md-Links/mdLinks.js",
   "bin": "src/md-Links/cli.js",
   "type": "module",
   "scripts": {
@@ -30,8 +30,7 @@
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
-    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",

@@ -151,11 +151,11 @@ export const getFilesAndDirectories = (route) => {
         
         // export default optionValidate;
         // optionValidate('./test/prueba/yesenia.md').then((res) => console.log(res)).catch((err)=>console.log(err))
-        // optionValidate('prueba1.md').then((res) => console.log(res)).catch((err)=>console.log(err))
+        optionValidate('prueba1.md').then((res) => console.log(res)).catch((err)=>console.log(err))
         //  console.log(optionValidate('prueba1.md'));
 
 
-        
+         
 
      
          
