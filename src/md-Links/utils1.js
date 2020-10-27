@@ -1,11 +1,3 @@
-
-
-// const jsdom = require ('jsdom');
-// const path = require('path');
-// const fs = require('fs');
-// const marked = require('marked');
-// const renderer = new marked.Renderer();
-// const fetch = require('node-fetch');
 import path from'path';
 import fs from'fs';
 import marked from'marked';
@@ -27,18 +19,11 @@ const ruta3 = 'C:\\Users\\HP\\MD-Links\\LIM013-fe-md-links\\test\\prueba';
 export const pathValid=(route)=> fs.existsSync(route)?  true:false;
 // console.log(pathValid(ruta1));
 
-export const pathAbsolute = (route)=> path.isAbsolute(route) ? true:false;
+export const pathAbsolute = (route)=> path.isAbsolute(route)? true:false;
 // console.log(pathAbsolute(ruta1));
-
-// const transAbsolute = (route) => transAbsolute(route) ? path.resolve(route):false;
-// console.log(transAbsolute(ruta1));
-// export const transAbsolute = (route) => {
-//     const absolutePath = path.resolve(route);
-//     return absolutePath;
-//   };
   
 
-  export const transAbsolute = (route) => {
+export const transAbsolute = (route) => {
     return path.resolve(route);
   };
   // console.log(transAbsolute('prueba1.md'));
@@ -48,7 +33,7 @@ export const pathIsDirectory = (route)=>{
     const stats = fs.lstatSync(route);
     const directory =(stats.isDirectory(route)) ? true:false;
     return directory;
-}
+  };
 // console.log(pathIsDirectory(ruta3));
 
 
@@ -56,7 +41,7 @@ export const pathIsFile =( route) =>{
     const file = fs.lstatSync(route);
     const isFile = (file.isFile(route)) ? true:false;
     return isFile;
-}
+  }
 // console.log(pathIsFile(ruta1));
 
 
@@ -67,12 +52,12 @@ export const getFilesAndDirectories = (route) => {
     const readingDirectories=(route) => fs.readdirSync(route);
      return readingDirectories(route).map(element =>
       path.join(route, element),);
-};
+  };
 // console.log(getFilesAndDirectories(ruta3));
 
- export  const typeMarkdown = (route) => path.extname(route);
+export  const typeMarkdown = (route) => path.extname(route);
 
- export  const getFiles = (route) => {
+export  const getFiles = (route) => {
         let arrayOfMDFiles = []; // vamos a ir agregando elementos al array con push
         const newPath=transAbsolute(route);
         if (pathIsFile(newPath) === true) { //condiciona si path es archivo
@@ -93,9 +78,9 @@ export const getFilesAndDirectories = (route) => {
 
     
 
-     export const getLinks = (route) => {
-          let arrayMDLinks = [];
-          const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
+export const getLinks = (route) => {
+         let arrayMDLinks = [];
+        const readingFiles = (route) => fs.readFileSync(route, 'utf-8');
            getFiles(route).forEach((file) => {
             // const prueba = file.href.match(hrefs);
             // console.log(prueba);  
@@ -121,9 +106,9 @@ export const getFilesAndDirectories = (route) => {
         // console.log(getLinks('prueba1.md'));
 
 
-      export const optionValidate = (route)=>{
-          const linksArray = getLinks(route);
-          const valid = linksArray.map((link) => fetch(link.href)
+export const optionValidate = (route)=>{
+        const linksArray = getLinks(route);
+        const valid = linksArray.map((link) => fetch(link.href)
           .then((res)=>({
             href: link.href,
             text: link.text.substring(0, 50),
@@ -145,14 +130,10 @@ export const getFilesAndDirectories = (route) => {
           
         };
 
-      //  export default getLinks;
-         
-        // module.exports = optionValidate;
-        
-        // export default optionValidate;
-        // optionValidate('./test/prueba/yesenia.md').then((res) => console.log(res)).catch((err)=>console.log(err))
+      
+        // optionValidate('./test/prueba/yesenia.md').then((res) => console.}log(res)).catch((err)=>console.log(err))
         optionValidate('prueba1.md').then((res) => console.log(res)).catch((err)=>console.log(err))
-        //  console.log(optionValidate('prueba1.md'));
+       
 
 
          

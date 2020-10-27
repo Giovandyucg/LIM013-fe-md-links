@@ -58,13 +58,13 @@ export const linksStats = (arrObj) => {
     
 //   console.log('total Links: ' + linksStats(arrLinks));
   
-  export const uniqueStats = (arrObj) => {
+export const uniqueStats = (arrObj) => {
     return new Set(arrObj.map((links) => links.href)).size;
   }; 
     
 //   console.log('unique: ' + uniqueStats(arrLinks));
   
-  export const brokenStats = (arrObjValidate) => { 
+export const brokenStats = (arrObjValidate) => { 
     return arrObjValidate.filter(link => link.status >= 400).length;
   };
 

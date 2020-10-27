@@ -59,13 +59,8 @@ const route = process.argv[2]; // segundo argumento
 const validate = process.argv.indexOf('--validate');
 const optValidate = process.argv.indexOf('-v');// tercer argumento 
 const stats = process.argv.indexOf('--stats');
-const optStats = process.argv.indexOf('-s'); // cuarto argumento
-// const combinado=process.argv.indexOf('-v -s')//quinta opcion 
+const optStats = process.argv.indexOf('-s'); // cuarto argumento 
 const helps = process.argv.indexOf('--help');
-// const args = process.argv[2];
-// let options= process.argv[3];
-// console.log('route',args);
-// console.log('options',options);
 
 export const funcionCli = (route) => {
   if (helps >= 0 || route === undefined) {
@@ -77,17 +72,17 @@ export const funcionCli = (route) => {
         .then((links) => console.log(chalk.green(statsValidate(links))))
         .catch((error) => console.log(chalk.bgRedBright.black(error)));
     }
-    if (validate >= 0 || optValidate >= 0) {
+  if (validate >= 0 || optValidate >= 0) {
       return mdLinks(route, { validate: true })
         // .then((links) => console.log(optionValidate(links)))
         .then((links) =>links.forEach(link =>console.log(chalk.green(link.file, link.href, link.statusText, link.status, link.text))))
         .catch((error) => console.log(warning));
     }
-    if (stats >= 0 || optStats >= 0) {
+  if (stats >= 0 || optStats >= 0) {
       return mdLinks(route, { validate: false })
         .then((links) => console.log(chalk.blueBright(optionStats(links))))
         .catch((error) => console.error(error));
-    } else {
+  } else {
       return mdLinks(route, { validate: false })
         // .then((links) => console.log(links))
         .then((links) =>links.forEach(link =>console.log(chalk.green(link.href,link.file,link.text))))
